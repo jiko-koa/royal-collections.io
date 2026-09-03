@@ -2,8 +2,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Royal Collections | Shoes</title>
-<meta name="description" content="Royal Collections - stylish footwear in Thika.">
-<meta name="theme-color" content="#14532d"><link rel="preconnect" href="https://fonts.googleapis.com">
+<meta name="description" content="Royal Collections - stylish footwear in Thika, Kenya.">
+<meta name="theme-color" content="#800020"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><style>
 *{
   margin:0;
@@ -18,9 +18,9 @@ html{
 body{
   font-family:'Montserrat',sans-serif;
   background:
-    radial-gradient(circle at 10% 10%,rgba(255,215,0,.14),transparent 25%),
-    radial-gradient(circle at 90% 50%,rgba(255,55,150,.12),transparent 30%),
-    linear-gradient(135deg,#092d1a,#42001d,#123d25);
+    radial-gradient(circle at 10% 10%,rgba(212,175,55,.13),transparent 25%),
+    radial-gradient(circle at 90% 50%,rgba(16,185,129,.12),transparent 30%),
+    linear-gradient(135deg,#250009,#800020,#063d2a);
   color:#fff;
   overflow-x:hidden;
 }
@@ -30,9 +30,9 @@ header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(7,43,25,.96);
+  background:rgba(35,0,9,.97);
   backdrop-filter:blur(15px);
-  border-bottom:1px solid rgba(255,215,0,.35);
+  border-bottom:1px solid rgba(212,175,55,.45);
 }
 
 .nav{
@@ -49,12 +49,13 @@ header{
   font-family:'Cinzel',serif;
   font-size:22px;
   font-weight:900;
-  letter-spacing:1.5px;
-  color:#ffd700;
+  letter-spacing:2px;
+  color:#d4af37;
+  text-shadow:0 2px 15px rgba(212,175,55,.2);
 }
 
 .logo span{
-  color:#ff55a8;
+  color:#fff;
 }
 
 .nav-links{
@@ -66,18 +67,23 @@ header{
 .nav-links a{
   color:#fff;
   text-decoration:none;
-  font-weight:700;
+  font-weight:800;
   font-size:13px;
 }
 
+.nav-links a:hover{
+  color:#d4af37;
+}
+
 .cart-btn{
-  border:0;
-  background:linear-gradient(135deg,#ffd700,#ffb300);
-  color:#073119;
+  border:1px solid #d4af37;
+  background:linear-gradient(135deg,#d4af37,#f0d77a);
+  color:#35000d;
   padding:11px 16px;
   border-radius:25px;
   font-weight:900;
   cursor:pointer;
+  box-shadow:0 5px 20px rgba(212,175,55,.2);
 }
 
 @media(max-width:700px){
@@ -87,10 +93,11 @@ header{
 
   .logo{
     font-size:17px;
+    letter-spacing:1px;
   }
 }
 
-/* HERO BANNERS */
+/* HERO */
 .hero{
   position:relative;
   width:100%;
@@ -116,8 +123,8 @@ header{
   position:absolute;
   inset:0;
   background:
-    linear-gradient(90deg,rgba(4,35,20,.85),rgba(4,35,20,.10)),
-    linear-gradient(0deg,rgba(0,0,0,.4),transparent);
+    linear-gradient(90deg,rgba(35,0,9,.88),rgba(35,0,9,.12)),
+    linear-gradient(0deg,rgba(0,0,0,.42),transparent);
 }
 
 .slide-content{
@@ -133,21 +140,23 @@ header{
 }
 
 .slide-content small{
-  color:#ffd700;
+  color:#d4af37;
   font-weight:900;
   letter-spacing:3px;
   margin-bottom:10px;
 }
 
 .slide-content h1{
+  font-family:'Cinzel',serif;
   font-size:clamp(38px,7vw,76px);
   line-height:.95;
-  max-width:600px;
+  max-width:650px;
   font-weight:900;
+  letter-spacing:1px;
 }
 
 .slide-content h1 span{
-  color:#ff55a8;
+  color:#d4af37;
 }
 
 .shop-btn{
@@ -157,9 +166,10 @@ header{
   padding:14px 25px;
   border-radius:30px;
   text-decoration:none;
-  background:linear-gradient(135deg,#ffd700,#ffb300);
-  color:#073119;
+  background:linear-gradient(135deg,#d4af37,#f0d77a);
+  color:#35000d;
   font-weight:900;
+  box-shadow:0 8px 25px rgba(212,175,55,.25);
 }
 
 .dots{
@@ -183,7 +193,7 @@ header{
 
 .dot.active{
   opacity:1;
-  background:#ff55a8;
+  background:#d4af37;
 }
 
 /* CATEGORIES */
@@ -208,8 +218,8 @@ header{
   text-decoration:none;
   font-size:12px;
   font-weight:800;
-  background:linear-gradient(135deg,#ff3f91,#126b3a);
-  border:1px solid rgba(255,215,0,.3);
+  background:linear-gradient(135deg,#800020,#087f5b);
+  border:1px solid rgba(212,175,55,.45);
 }
 
 /* SECTIONS */
@@ -227,16 +237,17 @@ header{
 }
 
 .section-head h2{
+  font-family:'Cinzel',serif;
   font-size:24px;
   font-weight:900;
 }
 
 .section-head h2 span{
-  color:#ffd700;
+  color:#d4af37;
 }
 
 .view{
-  color:#ff69b4;
+  color:#d4af37;
   font-size:12px;
   font-weight:800;
 }
@@ -265,22 +276,22 @@ header{
   position:relative;
   overflow:hidden;
   border-radius:17px;
-  background:linear-gradient(145deg,#116638,#47001f);
-  border:1px solid rgba(255,215,0,.18);
-  box-shadow:0 8px 25px rgba(0,0,0,.25);
+  background:linear-gradient(145deg,#087f5b,#560014);
+  border:1px solid rgba(212,175,55,.25);
+  box-shadow:0 8px 25px rgba(0,0,0,.28);
   transition:.3s;
 }
 
 .product:hover{
   transform:translateY(-5px);
-  border-color:#ffd700;
+  border-color:#d4af37;
 }
 
 .product-image{
   position:relative;
   aspect-ratio:1/1;
   overflow:hidden;
-  background:#092d1a;
+  background:#250009;
 }
 
 .product-image img{
@@ -300,8 +311,8 @@ header{
   top:9px;
   left:9px;
   z-index:2;
-  background:#ff3e93;
-  color:#fff;
+  background:#d4af37;
+  color:#35000d;
   padding:5px 8px;
   border-radius:7px;
   font-size:9px;
@@ -322,7 +333,7 @@ header{
 }
 
 .stars{
-  color:#ffd700;
+  color:#d4af37;
   font-size:11px;
   margin-bottom:6px;
 }
@@ -338,8 +349,8 @@ header{
   border:0;
   border-radius:9px;
   padding:9px 5px;
-  background:#ffd700;
-  color:#073119;
+  background:#d4af37;
+  color:#35000d;
   font-size:10px;
   font-weight:900;
   cursor:pointer;
@@ -349,8 +360,9 @@ header{
   border:0;
   border-radius:9px;
   padding:9px 9px;
-  background:#ff3f91;
+  background:#087f5b;
   color:#fff;
+  border:1px solid rgba(212,175,55,.35);
   font-size:10px;
   font-weight:900;
   cursor:pointer;
@@ -371,13 +383,14 @@ header{
   justify-content:space-between;
   gap:20px;
   background:
-    radial-gradient(circle at 85% 30%,rgba(255,215,0,.25),transparent 25%),
-    linear-gradient(120deg,#07552c,#0c793e,#4b0022);
-  border:1px solid rgba(255,215,0,.35);
+    radial-gradient(circle at 85% 30%,rgba(212,175,55,.22),transparent 25%),
+    linear-gradient(120deg,#06452f,#087f5b,#680019);
+  border:1px solid rgba(212,175,55,.4);
 }
 
 .mpesa-box h2{
-  color:#ffd700;
+  font-family:'Cinzel',serif;
+  color:#d4af37;
   font-size:23px;
   font-weight:900;
 }
@@ -385,14 +398,14 @@ header{
 .mpesa-box p{
   margin-top:6px;
   font-size:11px;
-  color:#ffe1ee;
+  color:#e7f7ef;
 }
 
 .mpesa-number{
   padding:12px 17px;
   border-radius:12px;
-  background:#ff55a8;
-  color:#fff;
+  background:#d4af37;
+  color:#35000d;
   font-weight:900;
   font-size:13px;
 }
@@ -420,26 +433,28 @@ header{
   justify-content:space-between;
   overflow:hidden;
   background:
-    radial-gradient(circle at 80% 20%,rgba(255,215,0,.8),transparent 20%),
-    linear-gradient(120deg,#ff1f79,#0b6535,#3b0019);
-  border:1px solid rgba(255,215,0,.4);
+    radial-gradient(circle at 80% 20%,rgba(212,175,55,.65),transparent 20%),
+    linear-gradient(120deg,#800020,#087f5b,#35000d);
+  border:1px solid rgba(212,175,55,.4);
 }
 
 .promo h2{
+  font-family:'Cinzel',serif;
   font-size:30px;
   font-weight:900;
+  color:#d4af37;
 }
 
 .promo p{
   margin-top:7px;
-  color:#ffe8f3;
+  color:#e7f7ef;
   font-size:12px;
 }
 
 .promo button{
   border:0;
-  background:#ffd700;
-  color:#073119;
+  background:#d4af37;
+  color:#35000d;
   border-radius:30px;
   padding:13px 20px;
   font-weight:900;
@@ -456,13 +471,13 @@ header{
   padding:18px 10px;
   text-align:center;
   border-radius:15px;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,215,0,.15);
+  background:rgba(8,127,91,.18);
+  border:1px solid rgba(212,175,55,.2);
 }
 
 .feature strong{
   display:block;
-  color:#ffd700;
+  color:#d4af37;
   font-size:13px;
 }
 
@@ -470,7 +485,7 @@ header{
   display:block;
   font-size:9px;
   margin-top:5px;
-  color:#ffc9df;
+  color:#ccebdd;
 }
 
 @media(max-width:600px){
@@ -487,8 +502,8 @@ header{
   width:min(390px,94%);
   height:100vh;
   z-index:3000;
-  background:#073119;
-  border-left:1px solid rgba(255,215,0,.4);
+  background:#260009;
+  border-left:1px solid rgba(212,175,55,.4);
   box-shadow:-10px 0 40px rgba(0,0,0,.5);
   transition:.4s;
   padding:20px;
@@ -508,13 +523,14 @@ header{
 }
 
 .cart-header h2{
-  color:#ffd700;
+  font-family:'Cinzel',serif;
+  color:#d4af37;
 }
 
 .close{
-  background:#ff3f91;
+  background:#087f5b;
   color:#fff;
-  border:0;
+  border:1px solid #d4af37;
   width:35px;
   height:35px;
   border-radius:50%;
@@ -547,7 +563,7 @@ header{
 
 .remove{
   border:0;
-  background:#ff3f91;
+  background:#800020;
   color:#fff;
   border-radius:7px;
   padding:5px 7px;
@@ -559,8 +575,9 @@ header{
   border:0;
   padding:15px;
   border-radius:12px;
-  background:#25d366;
+  background:#087f5b;
   color:#fff;
+  border:1px solid #d4af37;
   font-weight:900;
   cursor:pointer;
 }
@@ -568,7 +585,7 @@ header{
 .empty{
   text-align:center;
   padding:50px 10px;
-  color:#ffc9df;
+  color:#d4af37;
   font-size:13px;
 }
 
@@ -577,18 +594,18 @@ footer{
   margin-top:30px;
   padding:35px 20px;
   text-align:center;
-  background:#041c10;
-  border-top:1px solid rgba(255,215,0,.2);
+  background:#1d0007;
+  border-top:1px solid rgba(212,175,55,.3);
 }
 
 footer h2{
   font-family:'Cinzel',serif;
-  color:#ffd700;
+  color:#d4af37;
   font-size:23px;
 }
 
 footer p{
-  color:#eeb5cd;
+  color:#ccebdd;
   font-size:11px;
   margin-top:8px;
 }
@@ -599,8 +616,9 @@ footer p{
   padding:13px 22px;
   border-radius:30px;
   text-decoration:none;
-  background:#25d366;
+  background:#087f5b;
   color:#fff;
+  border:1px solid #d4af37;
   font-weight:900;
 }
 
@@ -613,8 +631,8 @@ footer p{
   width:58px;
   height:58px;
   border-radius:50%;
-  border:3px solid #ffd700;
-  background:#ff3f91;
+  border:3px solid #d4af37;
+  background:#800020;
   color:#fff;
   font-size:22px;
   cursor:pointer;
@@ -628,8 +646,8 @@ footer p{
   width:21px;
   height:21px;
   border-radius:50%;
-  background:#ffd700;
-  color:#073119;
+  background:#d4af37;
+  color:#35000d;
   font-size:10px;
   display:flex;
   align-items:center;
@@ -646,11 +664,7 @@ footer p{
   </ul>  <button class="cart-btn" onclick="openCart()">
     🛒 CART <span id="topCount">0</span>
   </button></nav>
-</header><!-- =====================================================
-     4 HERO BANNERS
-     Replace hero1.jpg, hero2.jpg, hero3.jpg, hero4.jpg
-     with your generated banner files.
-===================================================== --><section class="hero">  <div class="slide active" style="background-image:url('hero1.jpg')">
+</header><!-- 4 HERO BANNERS --><section class="hero">  <div class="slide active" style="background-image:url('hero1.jpg')">
     <div class="slide-content">
       <small>ROYAL COLLECTIONS • THIKA</small>
       <h1>STEP INTO <span>STYLE.</span></h1>
@@ -694,13 +708,12 @@ footer p{
   <p>Confirm your order before payment.</p>
 </div>
 
-<!-- REPLACE THIS WITH YOUR M-PESA NUMBER -->
 <div class="mpesa-number">
   M-PESA: YOUR NUMBER
 </div>
 
   </div></section><!-- PROMO --><section class="promo" id="deals">  <div class="promo-box"><div>
-  <h2>ROYAL DEALS 💗</h2>
+  <h2>ROYAL DEALS</h2>
   <p>Fresh styles. Great choice.</p>
 </div>
 
@@ -748,11 +761,7 @@ target="_blank">
     0
   </span></button><script>
 
-/* =====================================================
-   19 SHOES
-   Replace the image filenames with your actual
-   19 image filenames if they are different.
-===================================================== */
+/* 19 SHOES */
 
 const products = [
 
@@ -802,7 +811,7 @@ products.forEach((product,index)=>{
         src="${product.image}"
         alt="${product.name}"
         loading="lazy"
-        onerror="this.src='https://via.placeholder.com/600x600/073119/FFD700?text=Royal+Collections'"
+        onerror="this.src='https://via.placeholder.com/600x600/250009/D4AF37?text=Royal+Collections'"
       >
 
     </div>
@@ -839,7 +848,7 @@ products.forEach((product,index)=>{
 });
 
 
-/* ADD */
+/* ADD TO CART */
 
 function addToCart(index){
 
@@ -871,7 +880,6 @@ function updateCart(){
     `;
 
     return;
-
   }
 
   container.innerHTML="";
@@ -963,7 +971,6 @@ function checkout(){
     alert("Your cart is empty.");
 
     return;
-
   }
 
   let message=
