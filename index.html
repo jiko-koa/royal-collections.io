@@ -4,561 +4,617 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Royal Fashion Collections | Clothing & Shoes Thika</title>
+<title>Royal Collections | Shoes</title>
 
-<meta name="description" content="Royal Fashion Collections Thika — premium clothing and shoes. Free delivery countrywide.">
-<meta name="theme-color" content="#8b1238">
+<meta name="description" content="Royal Collections - stylish shoes for men, women and kids.">
+<meta name="theme-color" content="#e91e63">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-:root{
-    --wine:#8b1238;
-    --deep:#410b23;
-    --red:#c5284d;
-    --gold:#e7b84b;
-    --cream:#fff1d6;
-    --pink:#f6b7c7;
-    --dark:#210914;
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    color:#fff;
-    background:
-      radial-gradient(circle at 10% 10%,rgba(231,184,75,.18),transparent 28%),
-      radial-gradient(circle at 90% 30%,rgba(246,183,199,.16),transparent 30%),
-      linear-gradient(135deg,#210914,#510b2b 45%,#8b1238 100%);
-    min-height:100vh;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-button{
-    font-family:inherit;
-    border:0;
-    cursor:pointer;
+  font-family:'Montserrat',sans-serif;
+  background:
+    radial-gradient(circle at top left,rgba(255,215,0,.12),transparent 30%),
+    linear-gradient(135deg,#26000e,#50001f,#24000d);
+  color:#fff;
+  overflow-x:hidden;
 }
 
 /* HEADER */
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    padding:14px 5%;
-    background:rgba(33,9,20,.92);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(231,184,75,.25);
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(48,0,18,.95);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid rgba(255,215,0,.3);
 }
 
 .nav{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
+  max-width:1200px;
+  margin:auto;
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 18px;
 }
 
 .logo{
-    font-family:'Playfair Display',serif;
-    font-size:1.35rem;
-    color:var(--gold);
-    line-height:1;
+  font-size:22px;
+  font-weight:900;
+  color:#ffd700;
+  letter-spacing:1px;
 }
 
 .logo span{
-    display:block;
-    font-family:'Poppins',sans-serif;
-    font-size:.57rem;
-    letter-spacing:3px;
-    color:#fff;
-    margin-top:5px;
+  color:#ff4fa3;
 }
 
-.nav-actions{
-    display:flex;
-    gap:8px;
+.nav-links{
+  display:flex;
+  gap:22px;
+  list-style:none;
 }
 
-.nav-btn{
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:linear-gradient(135deg,var(--wine),var(--red));
-    border:1px solid rgba(255,255,255,.12);
-    font-size:1.1rem;
-    position:relative;
+.nav-links a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  font-size:13px;
 }
 
-.cart-count{
-    position:absolute;
-    top:-4px;
-    right:-3px;
-    background:var(--gold);
-    color:#30101b;
-    width:19px;
-    height:19px;
-    border-radius:50%;
-    font-size:.65rem;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:800;
+.cart-btn{
+  border:0;
+  background:linear-gradient(135deg,#ffd700,#ffb300);
+  color:#390014;
+  padding:11px 16px;
+  border-radius:25px;
+  font-weight:900;
+  cursor:pointer;
+  box-shadow:0 5px 20px rgba(255,215,0,.25);
+}
+
+@media(max-width:700px){
+  .nav-links{
+    display:none;
+  }
+
+  .logo{
+    font-size:18px;
+  }
 }
 
 /* HERO */
 .hero{
-    min-height:75vh;
-    display:flex;
-    align-items:center;
-    position:relative;
-    overflow:hidden;
-    padding:55px 5%;
+  position:relative;
+  width:100%;
+  min-height:440px;
+  overflow:hidden;
 }
 
-.hero:before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:
-      linear-gradient(90deg,rgba(33,9,20,.88),rgba(65,11,35,.55),rgba(65,11,35,.15)),
-      url('hero.jpg') center/cover;
-    opacity:.95;
-    z-index:-2;
+.slide{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition:opacity .8s ease;
+  background-size:cover;
+  background-position:center;
 }
 
-.hero:after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(180deg,transparent 55%,#210914 100%);
-    z-index:-1;
+.slide.active{
+  opacity:1;
 }
 
-.hero-content{
-    width:100%;
-    max-width:1200px;
-    margin:auto;
+.slide::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(25,0,12,.85),rgba(25,0,12,.15)),
+    linear-gradient(0deg,rgba(0,0,0,.45),transparent);
+}
+
+.slide-content{
+  position:relative;
+  z-index:2;
+  max-width:1200px;
+  margin:auto;
+  min-height:440px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:30px;
+}
+
+.slide-content small{
+  color:#ffd700;
+  font-weight:900;
+  letter-spacing:3px;
+  margin-bottom:10px;
+}
+
+.slide-content h1{
+  font-size:clamp(38px,7vw,76px);
+  line-height:.95;
+  max-width:600px;
+  font-weight:900;
+}
+
+.slide-content h1 span{
+  color:#ff55a8;
+}
+
+.shop-btn{
+  display:inline-block;
+  width:max-content;
+  margin-top:25px;
+  padding:14px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  background:linear-gradient(135deg,#ffd700,#ffb300);
+  color:#3c0015;
+  font-weight:900;
+  box-shadow:0 8px 25px rgba(255,215,0,.25);
+}
+
+.dots{
+  position:absolute;
+  z-index:5;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:8px;
+}
+
+.dot{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#fff;
+  opacity:.5;
+  cursor:pointer;
+}
+
+.dot.active{
+  opacity:1;
+  background:#ffd700;
+}
+
+/* CATEGORY STRIP */
+.categories{
+  max-width:1200px;
+  margin:auto;
+  padding:22px 14px;
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+}
+
+.categories::-webkit-scrollbar{
+  display:none;
+}
+
+.category{
+  white-space:nowrap;
+  padding:11px 17px;
+  border-radius:30px;
+  color:#fff;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:800;
+  background:linear-gradient(135deg,#e91e63,#8e1244);
+  border:1px solid rgba(255,215,0,.3);
+}
+
+/* SECTION */
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:15px 14px 40px;
+}
+
+.section-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:18px;
+}
+
+.section-head h2{
+  font-size:24px;
+  font-weight:900;
+}
+
+.section-head h2 span{
+  color:#ffd700;
+}
+
+.view{
+  color:#ff69b4;
+  font-size:12px;
+  font-weight:800;
+}
+
+/* PRODUCT GRID */
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+@media(max-width:900px){
+  .products{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .products{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
+}
+
+/* PRODUCT CARD */
+.product{
+  position:relative;
+  overflow:hidden;
+  border-radius:17px;
+  background:linear-gradient(145deg,#6e0730,#360019);
+  border:1px solid rgba(255,215,0,.18);
+  box-shadow:0 8px 25px rgba(0,0,0,.25);
+  transition:.3s;
+}
+
+.product:hover{
+  transform:translateY(-5px);
+  border-color:#ffd700;
+}
+
+.product-image{
+  position:relative;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  background:#26000e;
+}
+
+.product-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:.5s;
+}
+
+.product:hover img{
+  transform:scale(1.06);
 }
 
 .badge{
-    display:inline-block;
-    padding:8px 15px;
-    border:1px solid rgba(231,184,75,.5);
-    background:rgba(231,184,75,.12);
-    color:var(--gold);
-    border-radius:30px;
-    font-size:.72rem;
-    font-weight:700;
-    letter-spacing:1.5px;
-    margin-bottom:18px;
+  position:absolute;
+  top:9px;
+  left:9px;
+  z-index:2;
+  background:#ff3e93;
+  color:#fff;
+  padding:5px 8px;
+  border-radius:7px;
+  font-size:9px;
+  font-weight:900;
 }
 
-.hero h1{
-    font-family:'Playfair Display',serif;
-    font-size:clamp(3rem,10vw,6.5rem);
-    line-height:.9;
-    max-width:750px;
+.product-info{
+  padding:12px;
 }
 
-.hero h1 span{
-    color:var(--gold);
+.product-name{
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:7px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
-.hero p{
-    margin:20px 0;
-    color:#ffe8ee;
-    font-size:.95rem;
+.stars{
+  color:#ffd700;
+  font-size:11px;
+  margin-bottom:6px;
 }
 
-.hero-buttons{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
+.price{
+  color:#ffd700;
+  font-size:17px;
+  font-weight:900;
 }
 
-.btn{
-    padding:13px 20px;
-    border-radius:30px;
-    font-weight:700;
-    font-size:.82rem;
-    transition:.25s;
+.product-actions{
+  display:flex;
+  gap:6px;
+  margin-top:10px;
 }
 
-.btn-primary{
-    background:linear-gradient(135deg,var(--gold),#f6d77e);
-    color:#35101b;
+.add{
+  flex:1;
+  border:0;
+  border-radius:9px;
+  padding:9px 5px;
+  background:#ffd700;
+  color:#350014;
+  font-size:10px;
+  font-weight:900;
+  cursor:pointer;
 }
 
-.btn-dark{
-    background:linear-gradient(135deg,var(--wine),var(--red));
-    color:white;
-    border:1px solid rgba(255,255,255,.15);
-}
-
-.btn:hover{
-    transform:translateY(-3px);
+.order{
+  border:0;
+  border-radius:9px;
+  padding:9px 9px;
+  background:#ff3f91;
+  color:#fff;
+  font-size:10px;
+  font-weight:900;
+  cursor:pointer;
 }
 
 /* PROMO */
 .promo{
-    padding:12px 5%;
-    background:linear-gradient(90deg,#e7b84b,#f6d77e,#e7b84b);
-    color:#35101b;
-    text-align:center;
-    font-weight:800;
-    font-size:.78rem;
-    letter-spacing:1px;
+  max-width:1200px;
+  margin:5px auto 35px;
+  padding:0 14px;
 }
 
-/* SECTIONS */
-section{
-    padding:55px 5%;
+.promo-box{
+  min-height:170px;
+  border-radius:25px;
+  padding:30px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 80% 20%,rgba(255,215,0,.8),transparent 20%),
+    linear-gradient(120deg,#e91e63,#70002f,#3b0019);
+  border:1px solid rgba(255,215,0,.4);
 }
 
-.container{
-    max-width:1200px;
-    margin:auto;
+.promo h2{
+  font-size:30px;
+  font-weight:900;
 }
 
-.section-head{
-    display:flex;
-    align-items:end;
-    justify-content:space-between;
-    margin-bottom:22px;
-    gap:10px;
+.promo p{
+  margin-top:7px;
+  color:#ffe8f3;
+  font-size:12px;
 }
 
-.section-head h2{
-    font-family:'Playfair Display',serif;
-    font-size:2rem;
+.promo button{
+  border:0;
+  background:#ffd700;
+  color:#380014;
+  border-radius:30px;
+  padding:13px 20px;
+  font-weight:900;
 }
 
-.section-head p{
-    color:var(--pink);
-    font-size:.75rem;
+/* WHY US */
+.features{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
 }
 
-/* CATEGORIES */
-.categories{
-    display:grid;
+.feature{
+  padding:18px 10px;
+  text-align:center;
+  border-radius:15px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,215,0,.15);
+}
+
+.feature strong{
+  display:block;
+  color:#ffd700;
+  font-size:13px;
+}
+
+.feature span{
+  display:block;
+  font-size:9px;
+  margin-top:5px;
+  color:#ffc9df;
+}
+
+@media(max-width:600px){
+  .features{
     grid-template-columns:repeat(2,1fr);
-    gap:14px;
+  }
 }
 
-.category{
-    min-height:170px;
-    border-radius:22px;
-    overflow:hidden;
-    position:relative;
-    display:flex;
-    align-items:end;
-    padding:20px;
-    border:1px solid rgba(255,255,255,.12);
-    background-size:cover;
-    background-position:center;
+/* CART */
+.cart-panel{
+  position:fixed;
+  top:0;
+  right:-390px;
+  width:min(390px,94%);
+  height:100vh;
+  z-index:3000;
+  background:#330017;
+  border-left:1px solid rgba(255,215,0,.4);
+  box-shadow:-10px 0 40px rgba(0,0,0,.5);
+  transition:.4s;
+  padding:20px;
+  overflow-y:auto;
 }
 
-.category:after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(transparent 20%,rgba(33,9,20,.9));
+.cart-panel.open{
+  right:0;
 }
 
-.category h3{
-    position:relative;
-    z-index:2;
-    font-family:'Playfair Display',serif;
-    font-size:1.5rem;
+.cart-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding-bottom:15px;
+  border-bottom:1px solid rgba(255,255,255,.1);
 }
 
-/* PRODUCTS */
-.product-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:14px;
+.cart-header h2{
+  color:#ffd700;
 }
 
-.product{
-    background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.035));
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:20px;
-    overflow:hidden;
-    backdrop-filter:blur(8px);
+.close{
+  background:#ff3f91;
+  color:#fff;
+  border:0;
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  cursor:pointer;
+  font-weight:900;
 }
 
-.product-img{
-    width:100%;
-    aspect-ratio:1/1.12;
-    object-fit:cover;
-    display:block;
-    background:linear-gradient(135deg,#6d1638,#2c0a1a);
+.cart-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 0;
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-.product-info{
-    padding:12px;
+.cart-item img{
+  width:60px;
+  height:60px;
+  object-fit:cover;
+  border-radius:10px;
 }
 
-.product-title{
-    font-weight:700;
-    font-size:.85rem;
-    margin-bottom:4px;
+.cart-item-info{
+  flex:1;
 }
 
-.price{
-    color:var(--gold);
-    font-weight:800;
-    font-size:.9rem;
-    margin-bottom:10px;
+.cart-item-info strong{
+  font-size:12px;
 }
 
-.add{
-    width:100%;
-    padding:10px;
-    border-radius:12px;
-    background:linear-gradient(135deg,var(--gold),#f5d06d);
-    color:#35101b;
-    font-size:.75rem;
-    font-weight:800;
+.cart-item-info div{
+  color:#ffd700;
+  font-size:12px;
+  margin-top:5px;
 }
 
-/* INFO */
-.info-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
+.remove{
+  border:0;
+  background:#ff3f91;
+  color:#fff;
+  border-radius:7px;
+  padding:5px 7px;
+  cursor:pointer;
 }
 
-.info{
-    padding:18px 12px;
-    text-align:center;
-    border-radius:18px;
-    background:rgba(255,255,255,.07);
-    border:1px solid rgba(255,255,255,.1);
+.cart-total{
+  padding:20px 0;
+  display:flex;
+  justify-content:space-between;
+  font-size:18px;
+  font-weight:900;
 }
 
-.info-icon{
-    font-size:1.6rem;
-    margin-bottom:8px;
+.checkout{
+  width:100%;
+  border:0;
+  padding:15px;
+  border-radius:12px;
+  background:#25d366;
+  color:#fff;
+  font-weight:900;
+  cursor:pointer;
 }
 
-.info h3{
-    font-size:.78rem;
-    color:var(--gold);
-}
-
-.info p{
-    font-size:.68rem;
-    color:#f9dfe6;
-    margin-top:4px;
-}
-
-/* MPESA */
-.mpesa{
-    border-radius:25px;
-    padding:28px 20px;
-    text-align:center;
-    background:
-      radial-gradient(circle at top right,rgba(231,184,75,.25),transparent 35%),
-      linear-gradient(135deg,#410b23,#8b1238);
-    border:1px solid rgba(231,184,75,.35);
-}
-
-.mpesa h2{
-    font-family:'Playfair Display',serif;
-    font-size:2rem;
-}
-
-.mpesa-number{
-    color:var(--gold);
-    font-size:1.5rem;
-    font-weight:800;
-    margin:8px 0 15px;
+.empty{
+  text-align:center;
+  padding:50px 10px;
+  color:#ffc9df;
+  font-size:13px;
 }
 
 /* FOOTER */
 footer{
-    padding:35px 5%;
-    background:#180711;
-    text-align:center;
+  margin-top:30px;
+  padding:35px 20px;
+  text-align:center;
+  background:#1d000b;
+  border-top:1px solid rgba(255,215,0,.2);
 }
 
-.footer-logo{
-    font-family:'Playfair Display',serif;
-    color:var(--gold);
-    font-size:1.6rem;
+footer h2{
+  color:#ffd700;
+  font-size:23px;
 }
 
 footer p{
-    color:#d8aebc;
-    font-size:.72rem;
-    margin-top:8px;
+  color:#eeb5cd;
+  font-size:11px;
+  margin-top:8px;
 }
 
-.contact{
-    margin-top:16px;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:8px;
-}
-
-.contact a{
-    padding:9px 13px;
-    border-radius:20px;
-    background:rgba(255,255,255,.07);
-    font-size:.7rem;
-}
-
-/* CART */
-.cart-overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.65);
-    z-index:2000;
-    display:none;
-}
-
-.cart-overlay.active{
-    display:block;
-}
-
-.cart{
-    position:absolute;
-    right:0;
-    top:0;
-    height:100%;
-    width:min(400px,92%);
-    background:linear-gradient(145deg,#300918,#650d31);
-    padding:20px;
-    overflow:auto;
-    box-shadow:-10px 0 40px rgba(0,0,0,.4);
-}
-
-.cart-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:20px;
-}
-
-.cart-top h2{
-    font-family:'Playfair Display',serif;
-}
-
-.close{
-    width:38px;
-    height:38px;
-    border-radius:50%;
-    background:rgba(255,255,255,.1);
-    color:white;
-}
-
-.cart-item{
-    display:flex;
-    gap:10px;
-    padding:10px 0;
-    border-bottom:1px solid rgba(255,255,255,.1);
-}
-
-.cart-item img{
-    width:60px;
-    height:60px;
-    object-fit:cover;
-    border-radius:10px;
-}
-
-.cart-item strong{
-    font-size:.78rem;
-}
-
-.cart-item small{
-    color:var(--gold);
-}
-
-.cart-total{
-    display:flex;
-    justify-content:space-between;
-    margin:20px 0;
-    font-weight:800;
-}
-
-.cart-total span{
-    color:var(--gold);
-}
-
-.empty{
-    color:#e5bac7;
-    text-align:center;
-    padding:30px 0;
-    font-size:.8rem;
-}
-
-/* WHATSAPP FLOAT */
 .whatsapp{
-    position:fixed;
-    right:17px;
-    bottom:17px;
-    z-index:1500;
-    width:56px;
-    height:56px;
-    border-radius:50%;
-    background:#20c063;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:1.5rem;
-    box-shadow:0 8px 25px rgba(0,0,0,.35);
+  display:inline-block;
+  margin-top:18px;
+  padding:13px 22px;
+  border-radius:30px;
+  text-decoration:none;
+  background:#25d366;
+  color:#fff;
+  font-weight:900;
 }
 
-/* DESKTOP */
-@media(min-width:700px){
-    .product-grid{
-        grid-template-columns:repeat(4,1fr);
-    }
-
-    .categories{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .hero{
-        min-height:80vh;
-    }
+/* FLOATING CART */
+.float-cart{
+  position:fixed;
+  right:17px;
+  bottom:18px;
+  z-index:1500;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  border:3px solid #ffd700;
+  background:#e91e63;
+  color:#fff;
+  font-size:22px;
+  cursor:pointer;
+  box-shadow:0 8px 30px rgba(0,0,0,.4);
 }
 
-/* SMALL PHONES */
-@media(max-width:380px){
-    .hero h1{
-        font-size:2.8rem;
-    }
-
-    .product-grid{
-        gap:9px;
-    }
-
-    .product-info{
-        padding:9px;
-    }
-
-    section{
-        padding:42px 4%;
-    }
+.cart-count{
+  position:absolute;
+  right:-3px;
+  top:-5px;
+  width:21px;
+  height:21px;
+  border-radius:50%;
+  background:#ffd700;
+  color:#300013;
+  font-size:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
 }
 </style>
 </head>
@@ -566,464 +622,443 @@ footer p{
 <body>
 
 <header>
-    <div class="nav">
-        <a href="#" class="logo">
-            ROYAL
-            <span>FASHION COLLECTIONS</span>
-        </a>
+  <nav class="nav">
+    <div class="logo">ROYAL <span>COLLECTIONS</span></div>
 
-        <div class="nav-actions">
-            <a href="tel:+25410879627" class="nav-btn">☎</a>
+    <ul class="nav-links">
+      <li><a href="#shop">SHOP</a></li>
+      <li><a href="#deals">DEALS</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
 
-            <button class="nav-btn" onclick="openCart()">
-                🛍️
-                <span class="cart-count" id="cartCount">0</span>
-            </button>
-        </div>
-    </div>
+    <button class="cart-btn" onclick="openCart()">
+      🛒 CART <span id="topCount">0</span>
+    </button>
+  </nav>
 </header>
-
-<div class="promo">
-    ✨ FREE DELIVERY COUNTRYWIDE ✨
-</div>
 
 <!-- HERO -->
 <section class="hero">
-    <div class="hero-content">
 
-        <div class="badge">THIKA • KENYA</div>
-
-        <h1>
-            ROYAL
-            <span>FASHION</span>
-        </h1>
-
-        <p>Clothing • Shoes • Style</p>
-
-        <div class="hero-buttons">
-            <a href="#shop" class="btn btn-primary">SHOP NOW</a>
-
-            <a
-              href="https://wa.me/254762537242?text=Hello%20Royal%20Fashion%20Collections%2C%20I%20would%20like%20to%20make%20an%20inquiry."
-              class="btn btn-dark">
-              WHATSAPP
-            </a>
-        </div>
-
+  <!-- Replace these 4 filenames with your generated hero images -->
+  <div class="slide active"
+       style="background-image:url('hero1.jpg')">
+    <div class="slide-content">
+      <small>ROYAL COLLECTIONS</small>
+      <h1>STEP INTO <span>STYLE.</span></h1>
+      <a href="#shop" class="shop-btn">SHOP SHOES</a>
     </div>
+  </div>
+
+  <div class="slide"
+       style="background-image:url('hero2.jpg')">
+    <div class="slide-content">
+      <small>NEW ARRIVALS</small>
+      <h1>YOUR NEXT <span>FAVOURITE.</span></h1>
+      <a href="#shop" class="shop-btn">EXPLORE</a>
+    </div>
+  </div>
+
+  <div class="slide"
+       style="background-image:url('hero3.jpg')">
+    <div class="slide-content">
+      <small>ROYAL DEALS</small>
+      <h1>LOOK GOOD. <span>WALK ROYAL.</span></h1>
+      <a href="#deals" class="shop-btn">VIEW DEALS</a>
+    </div>
+  </div>
+
+  <div class="slide"
+       style="background-image:url('hero4.jpg')">
+    <div class="slide-content">
+      <small>FASHION FOOTWEAR</small>
+      <h1>FIND YOUR <span>PAIR.</span></h1>
+      <a href="#shop" class="shop-btn">SHOP NOW</a>
+    </div>
+  </div>
+
+  <div class="dots">
+    <span class="dot active" onclick="showSlide(0)"></span>
+    <span class="dot" onclick="showSlide(1)"></span>
+    <span class="dot" onclick="showSlide(2)"></span>
+    <span class="dot" onclick="showSlide(3)"></span>
+  </div>
+
 </section>
 
 <!-- CATEGORIES -->
-<section>
-    <div class="container">
+<div class="categories">
+  <a href="#shop" class="category">👠 HEELS</a>
+  <a href="#shop" class="category">👟 SNEAKERS</a>
+  <a href="#shop" class="category">👞 MEN</a>
+  <a href="#shop" class="category">👡 WOMEN</a>
+  <a href="#shop" class="category">🥿 KIDS</a>
+  <a href="#shop" class="category">🔥 DEALS</a>
+</div>
 
-        <div class="section-head">
-            <div>
-                <h2>Shop</h2>
-                <p>Choose your style</p>
-            </div>
-        </div>
+<!-- PRODUCTS -->
+<section class="section" id="shop">
 
-        <div class="categories">
+  <div class="section-head">
+    <h2>🔥 <span>Trending Shoes</span></h2>
+    <div class="view">19 PRODUCTS</div>
+  </div>
 
-            <a href="#clothing"
-               class="category"
-               style="background-image:url('cloth1.jpg');">
-                <h3>Clothing</h3>
-            </a>
+  <div class="products" id="productGrid"></div>
 
-            <a href="#shoes"
-               class="category"
-               style="background-image:url('shoe1.jpg');">
-                <h3>Shoes</h3>
-            </a>
-
-        </div>
-    </div>
 </section>
 
-<!-- CLOTHING -->
-<section id="clothing">
-    <div class="container">
-
-        <div class="section-head">
-            <h2>Clothing</h2>
-            <p>NEW • TRENDING</p>
-        </div>
-
-        <div class="product-grid">
-
-            <div class="product">
-                <img src="cloth1.jpg" class="product-img" alt="Clothing">
-                <div class="product-info">
-                    <div class="product-title">Royal Look</div>
-                    <div class="price">KSh —</div>
-                    <button class="add" onclick="addToCart('Royal Look','cloth1.jpg','')">
-                        ADD TO CART
-                    </button>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="cloth2.jpg" class="product-img" alt="Clothing">
-                <div class="product-info">
-                    <div class="product-title">Premium Style</div>
-                    <div class="price">KSh —</div>
-                    <button class="add" onclick="addToCart('Premium Style','cloth2.jpg','')">
-                        ADD TO CART
-                    </button>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="cloth3.jpg" class="product-img" alt="Clothing">
-                <div class="product-info">
-                    <div class="product-title">Elegant Wear</div>
-                    <div class="price">KSh —</div>
-                    <button class="add" onclick="addToCart('Elegant Wear','cloth3.jpg','')">
-                        ADD TO CART
-                    </button>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="cloth4.jpg" class="product-img" alt="Clothing">
-                <div class="product-info">
-                    <div class="product-title">Royal Collection</div>
-                    <div class="price">KSh —</div>
-                    <button class="add" onclick="addToCart('Royal Collection','cloth4.jpg','')">
-                        ADD TO CART
-                    </button>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="cloth5.jpg" class="product-img" alt="Clothing">
-                <div class="product-info">
-                    <div class="product-title">New Arrival</div>
-                    <div class="price">KSh —</div>
-                    <button class="add" onclick="addToCart('New Arrival','cloth5.jpg','')">
-                        ADD TO CART
-                    </button>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="cloth6.jpg" class="product-img" alt="Clothing">
-                <div class="product-info">
-                    <div class="product-title">Signature Wear</div>
-                    <div class="price">KSh —</div>
-                    <button class="add" onclick="addToCart('Signature Wear','cloth6.jpg','')">
-                        ADD TO CART
-                    </button>
-                </div>
-            </div>
-
-        </div>
+<!-- PROMO -->
+<section class="promo" id="deals">
+  <div class="promo-box">
+    <div>
+      <h2>ROYAL DEALS 💗</h2>
+      <p>Fresh styles. Great prices.</p>
     </div>
+    <button onclick="document.getElementById('shop').scrollIntoView()">
+      SHOP NOW
+    </button>
+  </div>
 </section>
 
-<!-- SHOES -->
-<section id="shoes">
-    <div class="container">
+<!-- FEATURES -->
+<section class="section">
 
-        <div class="section-head">
-            <h2>Shoes</h2>
-            <p>STEP IN STYLE</p>
-        </div>
+  <div class="section-head">
+    <h2>Why <span>Royal?</span></h2>
+  </div>
 
-        <div class="product-grid">
-
-            <div class="product">
-                <img src="shoe1.jpg" class="product-img" alt="Shoes">
-                <div class="product-info">
-                    <div class="product-title">Royal Shoes</div>
-                    <div class="price">KSh —</div>
-                    <button class="add" onclick="addToCart('Royal Shoes','shoe1.jpg','')">
-                        ADD TO CART
-                    </button>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="shoe2.jpg" class="product-img" alt="Shoes">
-                <div class="product-info">
-                    <div class="product-title">Premium Pair</div>
-                    <div class="price">KSh —</div>
-                    <button class="add" onclick="addToCart('Premium Pair','shoe2.jpg','')">
-                        ADD TO CART
-                    </button>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="shoe3.jpg" class="product-img" alt="Shoes">
-                <div class="product-info">
-                    <div class="product-title">Classic Style</div>
-                    <div class="price">KSh —</div>
-                    <button class="add" onclick="addToCart('Classic Style','shoe3.jpg','')">
-                        ADD TO CART
-                    </button>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="shoe4.jpg" class="product-img" alt="Shoes">
-                <div class="product-info">
-                    <div class="product-title">New Drop</div>
-                    <div class="price">KSh —</div>
-                    <button class="add" onclick="addToCart('New Drop','shoe4.jpg','')">
-                        ADD TO CART
-                    </button>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="shoe5.jpg" class="product-img" alt="Shoes">
-                <div class="product-info">
-                    <div class="product-title">Signature Shoes</div>
-                    <div class="price">KSh —</div>
-                    <button class="add" onclick="addToCart('Signature Shoes','shoe5.jpg','')">
-                        ADD TO CART
-                    </button>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="shoe6.jpg" class="product-img" alt="Shoes">
-                <div class="product-info">
-                    <div class="product-title">Royal Step</div>
-                    <div class="price">KSh —</div>
-                    <button class="add" onclick="addToCart('Royal Step','shoe6.jpg','')">
-                        ADD TO CART
-                    </button>
-                </div>
-            </div>
-
-        </div>
+  <div class="features">
+    <div class="feature">
+      <strong>🚚 DELIVERY</strong>
+      <span>Fast & convenient</span>
     </div>
-</section>
 
-<!-- WHY US -->
-<section>
-    <div class="container">
-
-        <div class="info-grid">
-
-            <div class="info">
-                <div class="info-icon">🚚</div>
-                <h3>FREE DELIVERY</h3>
-                <p>Countrywide</p>
-            </div>
-
-            <div class="info">
-                <div class="info-icon">💎</div>
-                <h3>PREMIUM STYLE</h3>
-                <p>Fresh collections</p>
-            </div>
-
-            <div class="info">
-                <div class="info-icon">💬</div>
-                <h3>ORDER EASY</h3>
-                <p>WhatsApp</p>
-            </div>
-
-        </div>
+    <div class="feature">
+      <strong>💳 PAYMENT</strong>
+      <span>Easy payment</span>
     </div>
-</section>
 
-<!-- MPESA -->
-<section>
-    <div class="container">
-
-        <div class="mpesa">
-
-            <h2>M-Pesa</h2>
-
-            <div class="mpesa-number">
-                010879627
-            </div>
-
-            <p style="font-size:.75rem;color:#f9dfe6;margin-bottom:16px;">
-                Pay securely via M-Pesa
-            </p>
-
-            <a href="tel:*334%23" class="btn btn-primary">
-                PAY WITH M-PESA
-            </a>
-
-        </div>
-
+    <div class="feature">
+      <strong>💬 WHATSAPP</strong>
+      <span>Quick orders</span>
     </div>
+
+    <div class="feature">
+      <strong>✨ QUALITY</strong>
+      <span>Shop with confidence</span>
+    </div>
+  </div>
+
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer id="contact">
+  <h2>ROYAL COLLECTIONS</h2>
+  <p>Premium footwear. Made for your style.</p>
 
-    <div class="footer-logo">
-        ROYAL FASHION COLLECTIONS
-    </div>
+  <a class="whatsapp"
+     href="https://wa.me/254101253639"
+     target="_blank">
+     💬 ORDER ON WHATSAPP
+  </a>
 
-    <p>Clothing • Shoes • Thika • Kenya</p>
-
-    <div class="contact">
-
-        <a href="tel:+25410879627">
-            ☎ +254 108 79627
-        </a>
-
-        <a href="https://wa.me/254762537242">
-            💬 +254 762 537242
-        </a>
-
-    </div>
-
-    <p style="margin-top:20px;">
-        © 2026 Royal Fashion Collections
-    </p>
-
+  <p style="margin-top:20px;">© 2026 Royal Collections</p>
 </footer>
 
-<!-- WHATSAPP -->
-<a
-    class="whatsapp"
-    href="https://wa.me/254762537242?text=Hello%20Royal%20Fashion%20Collections%2C%20I%20would%20like%20to%20make%20an%20inquiry."
-    aria-label="WhatsApp">
-    💬
-</a>
-
 <!-- CART -->
-<div class="cart-overlay" id="cartOverlay">
+<aside class="cart-panel" id="cartPanel">
 
-    <div class="cart">
+  <div class="cart-header">
+    <h2>🛒 Your Cart</h2>
+    <button class="close" onclick="closeCart()">×</button>
+  </div>
 
-        <div class="cart-top">
-            <h2>Your Cart</h2>
-            <button class="close" onclick="closeCart()">✕</button>
-        </div>
+  <div id="cartItems"></div>
 
-        <div id="cartItems">
-            <div class="empty">
-                Your cart is empty
-            </div>
-        </div>
+  <div class="cart-total">
+    <span>Total</span>
+    <span id="cartTotal">KSh 0</span>
+  </div>
 
-        <div class="cart-total">
-            <span>Total</span>
-            <span id="cartTotal">KSh 0</span>
-        </div>
+  <button class="checkout" onclick="checkout()">
+    💬 ORDER VIA WHATSAPP
+  </button>
 
-        <a
-            id="orderButton"
-            href="https://wa.me/254762537242?text=Hello%20Royal%20Fashion%20Collections%2C%20I%20would%20like%20to%20order."
-            class="btn btn-primary"
-            style="display:block;text-align:center;">
-            ORDER ON WHATSAPP
-        </a>
+</aside>
 
-    </div>
-</div>
+<button class="float-cart" onclick="openCart()">
+  🛒
+  <span class="cart-count" id="floatCount">0</span>
+</button>
 
 <script>
 
-let cart = [];
+/* =====================================================
+   ROYAL COLLECTIONS PRODUCTS
+   Change only the image filenames and prices here.
+   ===================================================== */
 
-function addToCart(name,image,price){
+const products = [
 
-    cart.push({
-        name:name,
-        image:image,
-        price:price
-    });
+  {name:"Royal Shoe 01", price:3500, image:"shoe1.jpg", badge:"NEW"},
+  {name:"Royal Shoe 02", price:4000, image:"shoe2.jpg", badge:"TRENDING"},
+  {name:"Royal Shoe 03", price:4500, image:"shoe3.jpg", badge:"NEW"},
+  {name:"Royal Shoe 04", price:3800, image:"shoe4.jpg", badge:""},
+  {name:"Royal Shoe 05", price:4200, image:"shoe5.jpg", badge:"HOT"},
+  {name:"Royal Shoe 06", price:5000, image:"shoe6.jpg", badge:"NEW"},
+  {name:"Royal Shoe 07", price:3500, image:"shoe7.jpg", badge:""},
+  {name:"Royal Shoe 08", price:4500, image:"shoe8.jpg", badge:"HOT"},
+  {name:"Royal Shoe 09", price:3900, image:"shoe9.jpg", badge:"NEW"},
+  {name:"Royal Shoe 10", price:4800, image:"shoe10.jpg", badge:""},
+  {name:"Royal Shoe 11", price:5200, image:"shoe11.jpg", badge:"TRENDING"},
+  {name:"Royal Shoe 12", price:4000, image:"shoe12.jpg", badge:""},
+  {name:"Royal Shoe 13", price:5500, image:"shoe13.jpg", badge:"NEW"},
+  {name:"Royal Shoe 14", price:4500, image:"shoe14.jpg", badge:"HOT"},
+  {name:"Royal Shoe 15", price:3800, image:"shoe15.jpg", badge:""},
+  {name:"Royal Shoe 16", price:5000, image:"shoe16.jpg", badge:"NEW"},
+  {name:"Royal Shoe 17", price:4200, image:"shoe17.jpg", badge:""},
+  {name:"Royal Shoe 18", price:4600, image:"shoe18.jpg", badge:"HOT"},
+  {name:"Royal Shoe 19", price:6000, image:"shoe19.jpg", badge:"ROYAL"}
 
-    updateCart();
+];
 
-    openCart();
+let cart=[];
+
+/* PRODUCTS */
+const grid=document.getElementById("productGrid");
+
+products.forEach((product,index)=>{
+
+  const card=document.createElement("article");
+  card.className="product";
+
+  card.innerHTML=`
+
+    <div class="product-image">
+
+      ${product.badge ?
+        `<span class="badge">${product.badge}</span>` : ""}
+
+      <img
+        src="${product.image}"
+        alt="${product.name}"
+        loading="lazy"
+        onerror="this.src='https://via.placeholder.com/600x600/350014/FFD700?text=Royal+Collections'"
+      >
+
+    </div>
+
+    <div class="product-info">
+
+      <div class="product-name">
+        ${product.name}
+      </div>
+
+      <div class="stars">
+        ★★★★★
+      </div>
+
+      <div class="price">
+        KSh ${product.price.toLocaleString()}
+      </div>
+
+      <div class="product-actions">
+
+        <button class="add"
+          onclick="addToCart(${index})">
+          ADD
+        </button>
+
+        <button class="order"
+          onclick="quickOrder(${index})">
+          ORDER
+        </button>
+
+      </div>
+
+    </div>
+  `;
+
+  grid.appendChild(card);
+
+});
+
+/* ADD TO CART */
+function addToCart(index){
+
+  cart.push(products[index]);
+
+  updateCart();
+
+  openCart();
 }
 
+/* UPDATE CART */
 function updateCart(){
 
-    const items = document.getElementById('cartItems');
-    const count = document.getElementById('cartCount');
+  const container=document.getElementById("cartItems");
 
-    count.textContent = cart.length;
+  document.getElementById("topCount").textContent=cart.length;
+  document.getElementById("floatCount").textContent=cart.length;
 
-    if(cart.length === 0){
+  if(cart.length===0){
 
-        items.innerHTML =
-        '<div class="empty">Your cart is empty</div>';
+    container.innerHTML=`
+      <div class="empty">
+        Your cart is empty 🛍️
+      </div>
+    `;
 
-        document.getElementById('cartTotal').textContent = 'KSh 0';
+    document.getElementById("cartTotal").textContent="KSh 0";
 
-        return;
-    }
+    return;
+  }
 
-    items.innerHTML = '';
+  container.innerHTML="";
 
-    let message =
-    'Hello Royal Fashion Collections, I would like to order:%0A%0A';
+  let total=0;
 
-    cart.forEach((item,index)=>{
+  cart.forEach((item,index)=>{
 
-        items.innerHTML += `
-            <div class="cart-item">
-                <img src="${item.image}" alt="">
-                <div>
-                    <strong>${item.name}</strong><br>
-                    <small>${item.price ? 'KSh '+item.price : 'Price inquiry'}</small><br>
-                    <button
-                        onclick="removeItem(${index})"
-                        style="margin-top:5px;background:none;color:#f6b7c7;font-size:.65rem;">
-                        REMOVE
-                    </button>
-                </div>
-            </div>
-        `;
+    total+=item.price;
 
-        message +=
-        `${index+1}. ${item.name}%0A`;
-    });
+    const div=document.createElement("div");
 
-    message +=
-    '%0AFree delivery countrywide.%0AThank you.';
+    div.className="cart-item";
 
-    document.getElementById('orderButton').href =
-    'https://wa.me/254762537242?text=' + message;
+    div.innerHTML=`
 
-    document.getElementById('cartTotal').textContent =
-    'Contact for price';
+      <img src="${item.image}" alt="${item.name}">
+
+      <div class="cart-item-info">
+        <strong>${item.name}</strong>
+        <div>KSh ${item.price.toLocaleString()}</div>
+      </div>
+
+      <button class="remove"
+        onclick="removeItem(${index})">
+        ×
+      </button>
+    `;
+
+    container.appendChild(div);
+
+  });
+
+  document.getElementById("cartTotal").textContent=
+    "KSh "+total.toLocaleString();
 }
 
+/* REMOVE */
 function removeItem(index){
 
-    cart.splice(index,1);
+  cart.splice(index,1);
 
-    updateCart();
+  updateCart();
 }
 
+/* CART OPEN/CLOSE */
 function openCart(){
 
-    document
-    .getElementById('cartOverlay')
-    .classList.add('active');
+  document
+    .getElementById("cartPanel")
+    .classList.add("open");
+
 }
 
 function closeCart(){
 
-    document
-    .getElementById('cartOverlay')
-    .classList.remove('active');
+  document
+    .getElementById("cartPanel")
+    .classList.remove("open");
+
 }
 
-document
-.getElementById('cartOverlay')
-.addEventListener('click',function(e){
+/* QUICK WHATSAPP ORDER */
+function quickOrder(index){
 
-    if(e.target === this){
-        closeCart();
-    }
+  const product=products[index];
 
-});
+  const message=
+    `Hello Royal Collections 👑%0A%0A`+
+    `I would like to order:%0A`+
+    `${product.name}%0A`+
+    `Price: KSh ${product.price.toLocaleString()}`;
+
+  window.open(
+    `https://wa.me/254101253639?text=${message}`,
+    "_blank"
+  );
+}
+
+/* CART CHECKOUT */
+function checkout(){
+
+  if(cart.length===0){
+
+    alert("Your cart is empty.");
+
+    return;
+  }
+
+  let message=
+    "Hello Royal Collections 👑%0A%0A"+
+    "I would like to order:%0A";
+
+  let total=0;
+
+  cart.forEach((item,i)=>{
+
+    message+=
+      `${i+1}. ${item.name} - KSh ${item.price.toLocaleString()}%0A`;
+
+    total+=item.price;
+
+  });
+
+  message+=
+    `%0ATotal: KSh ${total.toLocaleString()}%0A%0A`+
+    `Please confirm availability and delivery.`;
+
+  window.open(
+    `https://wa.me/254101253639?text=${message}`,
+    "_blank"
+  );
+}
+
+/* HERO SLIDER */
+let currentSlide=0;
+
+const slides=document.querySelectorAll(".slide");
+const dots=document.querySelectorAll(".dot");
+
+function showSlide(index){
+
+  slides.forEach(slide=>{
+    slide.classList.remove("active");
+  });
+
+  dots.forEach(dot=>{
+    dot.classList.remove("active");
+  });
+
+  slides[index].classList.add("active");
+  dots[index].classList.add("active");
+
+  currentSlide=index;
+}
+
+setInterval(()=>{
+
+  currentSlide=(currentSlide+1)%slides.length;
+
+  showSlide(currentSlide);
+
+},5000);
+
+/* START */
+updateCart();
 
 </script>
 
