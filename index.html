@@ -622,6 +622,28 @@ footer p{
   font-weight:900;
 }
 
+/* SOCIAL LINKS */
+.social-links{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+
+.social-links a{
+  display:inline-block;
+  padding:10px 15px;
+  border-radius:25px;
+  text-decoration:none;
+  color:#fff;
+  background:#087f5b;
+  border:1px solid #d4af37;
+  font-size:11px;
+  font-weight:900;
+}
+
 /* FLOAT CART */
 .float-cart{
   position:fixed;
@@ -743,11 +765,27 @@ footer p{
   <span>Kenya</span>
 </div>
 
-  </div></section><!-- FOOTER --><footer id="contact">  <h2>ROYAL COLLECTIONS</h2>  <p>📍 Thika, Kenya</p><a class="whatsapp"
-href="https://wa.me/254101253639"
+  </div></section><!-- FOOTER --><footer id="contact">  <h2>ROYAL COLLECTIONS</h2>  <p>📍 Thika, Kenya</p>
+
+<a class="whatsapp"
+href="https://wa.me/25462537242"
 target="_blank">
 💬 ORDER ON WHATSAPP
 </a>
+
+<div class="social-links">
+
+<a href="https://www.tiktok.com/@royalfashion79"
+target="_blank">
+🎵 TIKTOK
+</a>
+
+<a href="https://www.facebook.com/"
+target="_blank">
+📘 FACEBOOK
+</a>
+
+</div>
 
   <p>© 2026 Royal Collections</p></footer><!-- CART --><aside class="cart-panel" id="cartPanel">  <div class="cart-header"><h2>🛒 Your Cart</h2>
 
@@ -955,7 +993,7 @@ function quickOrder(index){
     `Please confirm availability and price.`;
 
   window.open(
-    `https://wa.me/254101253639?text=${message}`,
+    `https://wa.me/25462537242?text=${message}`,
     "_blank"
   );
 
@@ -989,7 +1027,7 @@ function checkout(){
     `%0APlease confirm availability and price.`;
 
   window.open(
-    `https://wa.me/254101253639?text=${message}`,
+    `https://wa.me/25462537242?text=${message}`,
     "_blank"
   );
 
